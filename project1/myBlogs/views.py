@@ -113,7 +113,6 @@ def signupuser(request):
                 user.save()
                 login(request,user)
                 return redirect('home')
-
         else:
             return render(request,'myBlogs/signupuser.html', {'form':UserCreationForm(), 'error': 'Password Mismatch Try Again'})
 
