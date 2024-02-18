@@ -30,9 +30,10 @@
 
 </head>
 
-<body>
+<body style="background: rgb(2,0,36);
+background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(74,73,150,1) 4%, rgba(140,140,255,1) 37%, rgba(255,162,162,1) 50%, rgba(255,166,166,1) 87%, rgba(255,172,172,1) 100%);">
 
-  <h1 style="padding-bottom:2vh;" class="text-center rainbow-neon padding-bottom:5vw">Welcome To BlogPost</h1>
+  <h1 style="padding-bottom:1vh; padding-top:4vh ; font-size: 300%;" class="text-center rainbow-neon">Welcome To BlogPost</h1>
   <div  id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="display: block; 
     height: fit-content;
     /* max-height: 50vw; */
@@ -76,19 +77,13 @@
     </div>
 
     <div class="container text-center mb-4">
-      <h3 class="display-4 text-info">Blog Categories</h3>
+      <h3 class="display-4 text-black" style="font-size: 300%; padding: 2%;"><b>Blog Categories</h3>
       {% if category %}
       <div class="d-flex flex-wrap justify-content-evenly">
         {% for y in category %}
 
-        <div id="My_card" class="card mb-2 btn btn-outline-secondary" style="width: 20vw; min-height:5vw;">
-          <style>
-            @media only screen and (max-width: 991px) {
-              #My_card {
-                width: 100%;
-              }
-            }
-          </style>
+        <div id="My_card" class="card mb-2 btn btn-outline-secondary" style="width: 20vw; height:70vh;">
+         
           <img src="{{ y.blogcat_img.url }}" class="card-img-top" alt="..." style="height: 15vw">
           <div class="card-body">
             <h5 class="card-title">{{ y.blog_cat }}</h5>
